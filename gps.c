@@ -1,3 +1,5 @@
+/*This code demonstrates how to interact with gpsd to fetch GNSS data and process it in real time*/
+/*clone the gps.h to use of APIs to interact with GPSD and zmq.h to transmit the GNSS data to other process*/
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
