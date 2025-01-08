@@ -1,5 +1,10 @@
-/*This code demonstrates how to interact with gpsd to fetch GNSS data and process it in real time*/
-/*clone the gps.h to use of APIs to interact with GPSD and zmq.h to transmit the GNSS data to other process*/
+/* This code demonstrates how to interact with gpsd to fetch GNSS data and process it in real time */
+/* clone the gps.h to use of APIs to interact with GPSD and zmq.h to transmit the GNSS data to other process */
+/* gps_open(const char *host, const char *port, struct gps_data_t *gpsdata) - Establishes communication with gpsd */
+/* gps_stream(struct gps_data_t *gpsdata, unsigned int flags, void *d) -  Configures the GPS data stream from gpsd */
+        /* Flags are - WATCH_ENABLE( Starts data streaming) WATCH_JSON(Requests GPS data in JSON format) */
+/* gps_waiting(struct gps_data_t *gpsdata, int timeout) - Waits for new GPS data to become available within a specified timeout */
+/* gps_read(struct gps_data_t *gpsdata, char *message, size_t message_len) - Reads the latest GPS data from gpsd */
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
